@@ -11,6 +11,15 @@ body {
     padding-left: 50px;
 }
 
+$color-1: #A47503;
+$color-2: #FFC12D;
+$color-3: #F9B718;
+$color-4: #E2E6E7;
+$color-5: #2C3E50;
+$color-6: #A1B1BC;
+$color-7: #CFD2D3;
+$color-8: #f44336;
+
 .wrapper {
     width: 570px;
 }
@@ -19,25 +28,25 @@ section {
     display: flex;
     padding-left: 49px;
     padding-right: 90px;
-    border: 1px solid #E2E6E7;
+    border: 1px solid $color-4;
     border-radius: 10px;
-}
 
-section::before {
-    content: '\f12a';
-    font-family: 'FontAwesome';
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
-    margin: 42px 28px 41px 0;
-    color: #A47503;
-    font-size: 24px;
-    border: 7px solid #F9B718;
-    border-radius: 50%;
-    background-color: #FFC12D;
+    &::before {
+        content: '\f12a';
+        font-family: 'FontAwesome';
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        margin: 42px 28px 42px 0;
+        color: $color-1;
+        font-size: 24px;
+        border: 7px solid $color-3;
+        border-radius: 50%;
+        background-color: $color-2;
+    }
 }
 
 section {
@@ -47,7 +56,7 @@ section {
         margin-top: 35px;
 
         h1 {
-            color: #2C3E50;
+            color: $color-5;
             font-size: 14px;
             font-weight: 900;
             font-family: 'Lato';
@@ -59,7 +68,7 @@ section {
         }
 
         p {
-            color: #A1B1BC;
+            color: $color-6;
             font-size: 14px;
             font-weight: normal;
             font-family: 'Lato';
@@ -72,16 +81,16 @@ section {
         top: 16.9px;
         right: 18px;
         font-size: 14px;
-        color: #CFD2D3;
-    }
+        color: $color-7;
 
-    a:hover {
-        color: #e74c3c;
-    }
-    
-    a::before {
-        content: '\f00d';
-        font-family: 'FontAwesome';
-        display: inline-block;
+        &:hover {
+            color: $color-8;
+        }
+
+        &::before {
+            content: '\f00d';
+            font-family: 'FontAwesome';
+            display: inline-block;
+        }
     }
 }
