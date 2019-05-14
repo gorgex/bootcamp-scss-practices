@@ -1,3 +1,188 @@
+.notification {
+    display: flex;
+    position: relative;
+    padding-right: 90px;
+    padding-left: 49px;
+    border: 1px solid $color-22;
+    border-radius: 10px;
+
+    &::before {
+        content: '\f12a';
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        margin: 42px 28px 42px 0;
+        border: 7px solid transparent;
+        border-radius: 50%;
+        border-color: $color-3;
+        background-color: $color-2;
+        color: $color-1;
+        font-family: 'FontAwesome', sans-serif;
+        font-size: 24px;
+    }
+
+    &.solid {
+        border-color: transparent;
+        background-color: $color-2;
+
+        &::before {
+            border-color: $color-4;
+            background-color: $color-2;
+            color: $color-1;
+        }
+
+        p {
+            color: $color-23;
+        }
+
+        a {
+            color: $color-5;
+        }
+    }
+
+    &.success {
+
+        &::before {
+            content: '\f00c';
+            border-color: $color-8;
+            background-color: $color-7;
+            color: $color-6;
+        }
+
+        &.solid {
+            background-color: $color-9;
+
+            &::before {
+                border-color: $color-8;
+                background-color: $color-7;
+                color: $color-6;
+            }
+
+            a {
+                color: $color-6;
+            }
+        }
+    }
+
+    &.error {
+
+        &::before {
+            content: '\f00d';
+            border-color: $color-12;
+            background-color: $color-11;
+            color: $color-10;
+        }
+
+        &.solid {
+            background-color: $color-13;
+
+            &::before {
+                border-color: $color-12;
+                background-color: $color-13;
+                color: $color-10;
+            }
+
+            a {
+                color: $color-10;
+            }
+        }
+    }
+
+    &.danger {
+
+        &::before {
+            content: '\f0e7';
+            border-color: $color-16;
+            background-color: $color-15;
+            color: $color-14;
+        }
+
+        &.solid {
+            background-color: $color-17;
+
+            &::before {
+                border-color: $color-16;
+                background-color: $color-17;
+                color: $color-14;
+            }
+
+            a {
+                color: $color-14;
+            }
+        }
+    }
+
+    &.info {
+        padding-right: 50px;
+
+        &::before {
+            content: '\f129';
+            border-color: $color-20;
+            background-color: $color-19;
+            color: $color-18;
+        }
+
+        &.solid {
+            background-color: $color-21;
+
+            &::before {
+                border-color: $color-20;
+                background-color: $color-21;
+                color: $color-18;
+            }
+
+            a {
+                color: $color-18;
+            }
+        }
+    }
+
+    div {
+        margin-top: 35px;
+
+        h1 {
+            margin-bottom: 7px;
+            color: $color-23;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 1.3px;
+            line-height: 24px;
+            text-transform: uppercase;
+            word-spacing: 1px;
+        }
+
+        p {
+            color: $color-24;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 24px;
+        }
+    }
+
+    a {
+        position: absolute;
+        top: 16.9px;
+        right: 18px;
+        color: $color-25;
+        font-size: 14px;
+
+        &:hover {
+            color: $color-26;
+        }
+
+        &::before {
+            content: '\f00d';
+            display: inline-block;
+            font-family: 'FontAwesome', sans-serif;
+        }
+    }
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -15,223 +200,6 @@ main {
 
         &:last-of-type {
             margin: 0;
-        }
-    }
-
-    section {
-        display: flex;
-        position: relative;
-        padding-right: 90px;
-        padding-left: 49px;
-        border: 1px solid $color-22;
-        border-radius: 10px;
-
-        &::before {
-            display: inline-flex;
-            flex-shrink: 0;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            margin: 42px 28px 42px 0;
-            border: 7px solid transparent;
-            border-radius: 50%;
-            font-family: 'FontAwesome', sans-serif;
-            font-size: 24px;
-        }
-
-        &.warning {
-
-            &::before {
-                content: '\f12a';
-                border-color: $color-3;
-                background-color: $color-2;
-                color: $color-1;
-            }
-
-            &.solid::before {
-                border-color: $color-4;
-            }
-        }
-
-        &.success {
-
-            &::before {
-                content: '\f00c';
-                border-color: $color-8;
-                background-color: $color-7;
-                color: $color-6;
-            }
-        }
-
-        &.error {
-
-            &::before {
-                content: '\f00d';
-                border-color: $color-12;
-                background-color: $color-11;
-                color: $color-10;
-            }
-        }
-
-        &.danger {
-
-            &::before {
-                content: '\f0e7';
-                border-color: $color-16;
-                background-color: $color-15;
-                color: $color-14;
-            }
-        }
-
-        &.info {
-            padding-right: 50px;
-
-            &::before {
-                content: '\f129';
-                border-color: $color-20;
-                background-color: $color-19;
-                color: $color-18;
-            }
-        }
-
-        div {
-            margin-top: 35px;
-
-            h1 {
-                margin-bottom: 7px;
-                color: $color-23;
-                font-family: 'Lato', sans-serif;
-                font-size: 14px;
-                font-weight: 900;
-                letter-spacing: 1.3px;
-                line-height: 24px;
-                text-transform: uppercase;
-                word-spacing: 1px;
-            }
-
-            p {
-                color: $color-24;
-                font-family: 'Lato', sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                line-height: 24px;
-            }
-        }
-
-        a {
-            position: absolute;
-            top: 16.9px;
-            right: 18px;
-            color: $color-25;
-            font-size: 14px;
-
-            &:hover {
-                color: $color-26;
-            }
-
-            &::before {
-                content: '\f00d';
-                display: inline-block;
-                font-family: 'FontAwesome', sans-serif;
-            }
-        }
-
-        &.solid {
-
-            p {
-                color: $color-23;
-            }
-
-            &.warning {
-                border-color: transparent;
-                background-color: $color-2;
-
-                &::before {
-                    background-color: $color-2;
-                    color: $color-1;
-                }
-
-                &.solid::before {
-                    border-color: $color-4;
-                }
-
-                a {
-                    color: $color-5;
-                }
-            }
-
-            &.success {
-                border-color: transparent;
-                background-color: $color-9;
-
-                &::before {
-                    background-color: $color-7;
-                    color: $color-6;
-                }
-
-                &.solid::before {
-                    border-color: $color-8;
-                }
-
-                a {
-                    color: $color-6;
-                }
-            }
-
-            &.error {
-                border-color: transparent;
-                background-color: $color-13;
-
-                &::before {
-                    background-color: $color-13;
-                    color: $color-10;
-                }
-
-                &.solid::before {
-                    border-color: $color-12;
-                }
-
-                a {
-                    color: $color-10;
-                }
-            }
-
-            &.danger {
-                border-color: transparent;
-                background-color: $color-17;
-
-                &::before {
-                    background-color: $color-17;
-                    color: $color-14;
-                }
-
-                &.solid::before {
-                    border-color: $color-16;
-                }
-
-                a {
-                    color: $color-14;
-                }
-            }
-
-            &.info {
-                border-color: transparent;
-                background-color: $color-21;
-
-                &::before {
-                    background-color: $color-21;
-                    color: $color-18;
-                }
-
-                &.solid::before {
-                    border-color: $color-20;
-                }
-
-                a {
-                    color: $color-18;
-                }
-            }
         }
     }
 }
